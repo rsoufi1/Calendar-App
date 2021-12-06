@@ -1,0 +1,44 @@
+html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background-color: #EDEDEB;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.sidenav {
+    background: linear-gradient(to top, #89BBB1, #B6E2D3);
+    width: 100px;
+    height: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+}
+
+.sidenav a {
+    width: 64px;
+    height: 64px;
+    margin: 20px;
+}
+
+.sidenav a img {
+    width: 64px;
+    height: 64px;
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(8deg) brightness(106%) contrast(101%);
+}
+
+.sidenav a .active {
+    filter: invert(91%) sepia(21%) saturate(679%) hue-rotate(340deg) brightness(104%) contrast(99%);
+}
+
+.sidenav a :hover {
+    filter: invert(94%) sepia(70%) saturate(296%) hue-rotate(299deg) brightness(115%) contrast(86%);
+}

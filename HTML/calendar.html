@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project Home</title>
+        <link rel="stylesheet" href="../CSS/universal.css">
+        <link rel="stylesheet" href="../CSS/calendar.css">
+        <script src="../JavaScript/calendar.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="calendarPage" id="calendarPage">
+            <div class="sidenav">
+                <a href="home.html">
+                    <img src="../Images/Home.png">
+                </a>
+                <a href="calendar.html">
+                    <img src ="../Images/Calendar.png" class="active">
+                </a>
+                <a href="notes.html">
+                    <img src="../Images/Notes.png">
+                </a>
+                <a href="settings.html">
+                    <img src="../Images/Settings.png">
+                </a>
+            </div>
+            <div class="header">
+                <input type="image" src="../Images/Back arrow.png">
+                <div class="month" id="month">Month</div>
+                <input type="image" src="../Images/Front arrow.png">
+                <button onclick="openCreateNewEvent()" id="createNewEventButton">Create Event</button>
+            </div>
+            <div class="calendar">
+                <div class="daysOfWeek">
+                    <div class="dayOfWeek">Sunday</div>
+                    <div class="dayOfWeek">Monday</div>
+                    <div class="dayOfWeek">Tuesday</div>
+                    <div class="dayOfWeek">Wednesday</div>
+                    <div class="dayOfWeek">Thursday</div>
+                    <div class="dayOfWeek">Friday</div>
+                    <div class="dayOfWeek">Saturday</div>
+                </div>
+                <div class="days" id="days">
+                </div>
+            </div>
+        </div>
+        <div class="createNewEvent" id="createNewEvent">
+            <form id="createNewEventForm" class="hide">
+                <!--Title-->
+                <input type="text" id="titleOfEvent" name="titleOfEvent" placeholder="Title of Event"><br/>
+                
+                <!--Start Date and End Date-->
+                <table>
+                    <tr>
+                        <td>Start Date:</td>
+                        <td>End Date:</td>
+                        <td><input type="checkbox" id="allDay" name="allDay">
+                            <label for="allDay">All Day</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="date" id="startDate" name="startDate"
+                            value="2018-07-22"
+                            min="2018-01-01" max="2018-12-31"></td>
+                        <td><input type="date" id="endDate" name="endDate"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="time" id="startTime" name="startTime"
+                            min="09:00" max="18:00" required></td>
+                            <td> <input type="time" id="endTime" name="endTime"
+                                min="09:00" max="18:00" required></td>
+                    </tr>
+                </table>
+
+                <!--Location-->
+                <div class="locationTitle">
+                    <img src="../Images/Location.png">
+                    <div>Location</div>
+                </div>
+                <input type="text" id="Location" name="Location"><br/>
+
+                <!--Location-->
+                <div class="friendsTitle">
+                    <img src="../Images/friends.png">
+                    <div>Add Friends</div>
+                </div>
+                <input type="text" id="friends" name="friends"><br/>
+
+
+                <!--Notes-->
+                <div class="notesTitle">Notes:</div>
+                <div class="notes">
+                    <div class="notesWritingArea" id="notesWritingArea" contenteditable="true">
+
+                    </div>
+
+                </div>
+
+                <br>
+                <div class="eventColor">
+                    <div class="eventColorTitle">Select event color:</div>
+                    <input type="color" id="eventColor" value="#ff0000">
+                </div>
+
+                <button id="submitButton">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>

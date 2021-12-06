@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project Home</title>
+        <link rel="stylesheet" href="../CSS/universal.css">
+        <link rel="stylesheet" href="../CSS/settings.css">
+        <script src="../jquery-3.6.0.js"></script>
+        <script src="../JavaScript/settings.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="sidenav">
+            <a href="home.html">
+                <img src="../Images/Home.png">
+            </a>
+            <a href="calendar.html">
+                <img src ="../Images/Calendar.png">
+            </a>
+            <a href="notes.html">
+                <img src="../Images/Notes.png">
+            </a>
+            <a href="settings.html">
+                <img src="../Images/Settings.png" class="active">
+            </a>
+        </div>
+        <div class="settingsPageContent">
+            <div class="settingsTitle">Settings</div>
+            <table>
+                <tr>
+                    <th>Name:</th>
+                    <td>Name of Person</td>
+                </tr>
+                <tr>
+                    <th>Friends:</th>
+                    <td><button id="addFriendButton">Add friend</button></td>
+                </tr>
+                <!--Attatch friends list here-->
+                <tr>
+                    <td>Friends name</td>
+                    <td>Friend user ID</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="addFriendModal" id="addFriendModal">
+            <div class="addFriendModalContent">
+                <div class="enterIDLabel">Enter friend's User ID:</div>
+                <input id="friendID" type="text">
+                <div id="results"></div>
+                <button id="submitFriendId">Submit</button>
+            </div>
+        </div>
+    </body>
+</html>

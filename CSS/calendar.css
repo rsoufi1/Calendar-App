@@ -1,0 +1,268 @@
+.calendarPage {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    transition: 0.75s;
+}
+
+.header {
+    margin-left: 100px;
+    height: 50px;
+    width: calc(100% - 100px - 72px);
+    display: inline-flex;
+    padding: 18px 36px;
+    align-items: center;
+}
+
+.header input {
+    height: 50px;
+}
+
+.header .month {
+    font-size: 32px;
+    padding: 12px;
+}
+
+.header button {
+    height: 50px;
+    border-radius: 25px;
+    right: 32px;
+    left: auto;
+    position: absolute;
+    border: none;
+    background-color: #B6E2D3;
+    padding: 0px 32px;
+    font-family: 'Quicksand';
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 600;
+    min-width: 170px;
+    transition: right 0.75s, min-width 0.75s;
+}
+
+.header button:hover {
+    cursor: pointer;
+    background-color: #89BBB1;
+}
+
+.calendar {
+    height: calc(100% - 50px - 36px - 18px);
+    width: calc(100% - 100px - 72px);
+    background-color: #FFFFFF;
+    margin: 0px 36px 18px 136px;
+    transition: 0.75s;
+}
+
+.calendar .daysOfWeek {
+    display: inline-grid;
+    width: 100%;
+    grid-template-columns: repeat(7, 1fr);
+    border-bottom: 3px #EDEDEB solid;
+}
+
+.calendar .daysOfWeek .dayOfWeek {
+    text-align: center;
+    color: #B6E2D3;
+    font-size: 20px;
+    padding: 16px;
+    border-right: 2px #D9EDE6 solid;
+}
+
+.calendar .daysOfWeek :last-child {
+    border-right: none;
+}
+
+.calendar .days {
+    display: inline-grid;
+    width: 100%;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 1fr;
+    border-bottom: 3px #EDEDEB solid;
+    height: calc(100% - 60px);
+}
+
+.createNewEvent {
+    background: linear-gradient(to top, #89BBB1, #B6E2D3);
+    height: 100%;
+    position: absolute;
+    right: 0;
+    width: 0px;
+    transition: 0.75s;
+    overflow: scroll;
+}
+
+.allDays:nth-child(7), 
+.allDays:nth-child(14), 
+.allDays:nth-child(21), 
+.allDays:nth-child(28), 
+.allDays:nth-child(35){
+    border-right: none;
+}
+
+.allDays {
+    border-right: 2px #D9EDE6 solid;
+    border-bottom: 2px #EDEDEB solid;
+    display: inline-flex;
+}
+
+.allDays:hover {
+    background-color: #DCEBE8;
+    cursor: pointer;
+}
+
+.inactive {
+    color: #EDEDEB;
+}
+
+.eventIcon {
+    height: 15px;
+    width: 15px;
+    border-radius: 7.5px;
+    margin: 2.5px;
+}
+
+.number {
+    padding: 15px;
+    line-height: 18px;
+    font-size: 18px;
+}
+
+.eventBox {
+    width: -webkit-fill-available;
+    display: inline-flex;
+    padding: 15px;
+    justify-content: flex-end;
+}
+
+form {
+    padding: 24px;
+}
+
+form table {
+    font-size: 18px;
+    padding: 24px 0px;
+    width: 100%;
+}
+
+.locationTitle, .friendsTitle {
+    height: 24px;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+.locationTitle img, .friendsTitle img {
+    height: 24px;
+    padding-right: 4px;
+    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(120deg) brightness(106%) contrast(101%);
+}
+
+#Location, #friends, #ShowLocation, #Showfriends {
+    width: calc(100% - 16px);
+    font-size: 18px;
+    margin: 8px 0px;
+    border-radius: 10px;
+    border: none;
+    height: 24px;
+    padding: 4px 8px;
+    outline: none;
+    font-family: 'Quicksand';
+    display: block;
+}
+
+#titleOfEvent, #showTitleOfEvent {
+    font-family: 'Quicksand';
+    font-size: 36px;
+    background: none;
+    border: none;
+    width: 100%;
+    outline: none;
+}
+
+.hide {
+    display: none;
+}
+
+.notesTitle {
+    height: 24px;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.notes {
+    background-color: white;
+    height: 400px;
+    border-radius: 12px;
+}
+
+.notesTextFormatting {
+    width: calc(100% - 16px);
+    padding: 8px;
+    border-bottom: 1px #D9EDE6 solid;
+}
+
+.commonFormattingButton {
+    margin-right: 4px;
+    background-color: white;
+    border: none;
+    font-size: 16px;
+}
+
+.notesTextFormatting :hover {
+    background-color: #DCEBE8;
+    cursor: pointer;
+}
+
+.notesWritingArea {
+    padding: 8px;
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+}
+
+#submitButton {
+    width: 100%;
+    margin: 16px 0px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: none;
+    background-color: #FFFFFF;
+}
+
+#submitButton:hover {
+    background-color: #DCEBE8;
+    cursor: pointer;
+}
+
+.eventColorTitle {
+    font-size: 24px;
+    padding-right: 12px;
+}
+
+.eventColor {
+    display: inline-flex;
+}
+
+.showEventModal {
+    display: none; /*Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.showEventModalContent {
+    background: linear-gradient(to top, #89BBB1, #B6E2D3);
+    margin: 15% auto;
+    padding: 40px 20px;
+    border: 1px solid #888;
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}

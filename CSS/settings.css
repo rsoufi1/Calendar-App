@@ -1,0 +1,113 @@
+.settingsPageContent {
+    width: calc(100% - 100px);
+    position: absolute;
+    left: 100px;
+}
+
+.settingsTitle {
+    font-size: 40px;
+    padding: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    background-color: white;
+    border-bottom: 2px #9FCCC3 solid;
+    line-height: 40px;
+}
+
+th{
+    text-align: left;
+    padding: 0px 12px;
+}
+
+td {
+    text-align: right;
+    padding: 0px 12px;
+}
+
+tr:nth-of-type(2n){
+    background-color: #E3EFEC;
+}
+
+#addFriendButton {
+    background-color: #B6E2D3;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 6px 24px;
+}
+
+#addFriendButton:hover {
+    background-color: #89BBB1;
+    cursor: pointer;
+}
+
+.addFriendModal {
+    display: none; /*Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.addFriendModalContent {
+    background: linear-gradient(to top, #89BBB1, #B6E2D3);
+    margin: 15% auto;
+    padding: 40px 20px;
+    border: 1px solid #888;
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.enterIDLabel {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    font-weight: 600;
+}
+
+#friendID {
+    width: 80%;
+    margin: auto;
+    margin-top: 24px;
+    border-radius: 15px;
+    height: 30px;
+    font-size: 24px;
+    margin-bottom: 24px;
+    border: none;
+}
+
+#results {
+    height: 24px;
+    margin-bottom: 24px;
+}
+
+#submitFriendId {
+    width: 80%;
+    margin: auto;
+    height: 32px;
+    border-radius: 24px;
+    font-size: 20px;
+    border: none;
+}
+
+#submitFriendId:hover {
+    background-color: #E3EFEC;
+    cursor: pointer;
+}
+
+#friendID:focus-visible{
+    outline: none;
+}

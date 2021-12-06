@@ -1,0 +1,80 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: linear-gradient(to top, #89BBB1, #B6E2D3);
+    width: 100%;
+    height: 100%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.createNewAccountPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.createNewAcocuntContainer {
+    height: 60%;
+    width: 50%;
+    background-color: #EDEDEB;
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 36px;
+    justify-content: center;
+}
+
+form {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 30px 0px;
+}
+
+form input {
+    margin: auto;
+    width: 80%;
+    padding: 1px 2px;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-bottom: 30px;
+    height: 48px;
+    font-size: 28px;
+    border-radius: 25px;
+    text-align: center;
+    font-family: inherit;
+    border: none;
+}
+
+#createNewAccountBtn {
+    background-color: #B6E2D3;
+    font-size: 30px;
+    border: none;
+    border-radius: 25px;
+    width: 80%;
+    align-items: center;
+    margin: auto;
+    padding: 8px;
+}
+
+#createNewAccountBtn:hover {
+    background-color: #89BBB1;
+    cursor: pointer;
+}
+
+form input:focus-visible{
+    outline: none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #9FCCC3;
+    opacity: 1; /* Firefox */
+  }
